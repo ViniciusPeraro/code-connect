@@ -1,0 +1,45 @@
+.card-post{
+    width: 486px;
+    height: 431px;
+    background:  #171D1F;
+    border-radius: 8px;
+}
+
+.header {
+    background-color: #888888;
+    border-radius: 8px 8px 0px 0px;
+    padding: 24px;
+    position: relative;
+}
+
+.header figure {
+    margin: 0;
+}
+
+.section {
+    color: #BCBCBC;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.section h2 {
+    margin: 0;
+    font-weight: 400;
+}
+
+.section p {
+    margin: 16px;
+    font-weight: 400;
+}
+
+.footer {
+    margin: 0px;
+    padding: 0px;
+}
+
+.link{  
+    cursor: pointer;
+    text-decoration: none;
+}

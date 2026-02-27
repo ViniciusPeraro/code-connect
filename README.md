@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Code Connect
 
-## Getting Started
+Aplicação desenvolvida com **Next.js** focada em renderização no servidor, consumo de API REST, paginação dinâmica e geração de páginas a partir de Markdown.
 
-First, run the development server:
+> 📚 Projeto desenvolvido como parte de estudos em Next.js (Alura)  
+> 🔗 Link do curso: https://cursos.alura.com.br/course/next-js-conheca-framework-react
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 Sobre o Projeto
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+O **Code Connect** simula uma plataforma de listagem e exibição de posts, aplicando conceitos modernos de desenvolvimento frontend com foco em:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Server-Side Rendering (SSR)
+- Otimização de imagens
+- Paginação baseada em API
+- Rotas dinâmicas
+- Conversão de Markdown para HTML
+- Boas práticas de logging
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧠 Principais Competências Demonstradas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🔹 Arquitetura com Next.js
+- Estruturação de aplicação utilizando App Router
+- Criação de páginas dinâmicas com parâmetros
+- Renderização no lado do servidor
+- Uso de `searchParams` para controle de estado via URL
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🔹 Consumo e Integração com API
+- Configuração de API mock utilizando `json-server`
+- Paginação baseada na interface do backend
+- Tratamento de respostas e controle de navegação
 
-## Deploy on Vercel
+### 🔹 Performance e Otimização
+- Uso do componente `Image` do Next.js para otimização automática
+- Configuração de imagens locais e remotas
+- Importação otimizada de fontes do Google
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🔹 Manipulação de Conteúdo Dinâmico
+- Conversão de Markdown para HTML
+- Uso das bibliotecas `remark` e `remark-html`
+- Geração de páginas a partir de conteúdo estruturado
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🔹 Observabilidade
+- Configuração do `Winston` como logger da aplicação
+- Organização de logs simples para melhor rastreabilidade
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Next.js**
+- **React**
+- **CSS Modules**
+- **json-server**
+- **Winston**
+- **Remark**
+- **Remark HTML**
+
+---
+
+## 🎯 Objetivos Técnicos Alcançados
+
+✔ Implementação de SSR  
+✔ Paginação controlada por query string  
+✔ Geração de rotas dinâmicas  
+✔ Conversão de Markdown para HTML  
+✔ Integração com API externa  
+✔ Estrutura escalável e modular  
+
+---

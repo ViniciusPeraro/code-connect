@@ -1,73 +1,182 @@
 # 🚀 Code Connect
 
-Aplicação desenvolvida com **Next.js** focada em renderização no servidor, consumo de API REST, paginação dinâmica e geração de páginas a partir de Markdown.
+**Code Connect** é uma aplicação **Full Stack com Next.js** que simula
+uma plataforma de publicação e navegação de posts técnicos.
 
-> 📚 Projeto desenvolvido como parte de estudos em Next.js (Alura)  
-> 🔗 Link do curso: https://cursos.alura.com.br/course/next-js-conheca-framework-react
+O projeto demonstra conceitos modernos de desenvolvimento como
+**Server-Side Rendering, integração com banco de dados, paginação
+eficiente, geração de conteúdo dinâmico e deploy em ambiente real**.
 
----
+> 📚 Projeto desenvolvido durante estudos de **Next.js (Alura)**  
+> 🔗 https://cursos.alura.com.br/course/next-js-conheca-framework-react  
+> 🔗 https://cursos.alura.com.br/course/next-js-construa-aplicacoes-postgres-prisma
 
-## 📌 Sobre o Projeto
+------------------------------------------------------------------------
 
-O **Code Connect** simula uma plataforma de listagem e exibição de posts, aplicando conceitos modernos de desenvolvimento frontend com foco em:
+# 🌐 Demo
 
-- Server-Side Rendering (SSR)
-- Otimização de imagens
-- Paginação baseada em API
-- Rotas dinâmicas
-- Conversão de Markdown para HTML
-- Boas práticas de logging
+https://code-connect-orcin-two.vercel.app
 
----
+------------------------------------------------------------------------
 
-## 🧠 Principais Competências Demonstradas
+# 🎯 Objetivo do Projeto
 
-### 🔹 Arquitetura com Next.js
-- Estruturação de aplicação utilizando App Router
-- Criação de páginas dinâmicas com parâmetros
-- Renderização no lado do servidor
-- Uso de `searchParams` para controle de estado via URL
+Construir uma aplicação que demonstra o fluxo completo de
+desenvolvimento **Full Stack moderno com Next.js**, incluindo:
 
-### 🔹 Consumo e Integração com API
-- Configuração de API mock utilizando `json-server`
-- Paginação baseada na interface do backend
-- Tratamento de respostas e controle de navegação
+-   Renderização no servidor (SSR)
+-   Integração com banco de dados
+-   Paginação performática
+-   Geração dinâmica de páginas
+-   Manipulação de conteúdo Markdown
+-   Deploy em ambiente real
 
-### 🔹 Performance e Otimização
-- Uso do componente `Image` do Next.js para otimização automática
-- Configuração de imagens locais e remotas
-- Importação otimizada de fontes do Google
+------------------------------------------------------------------------
 
-### 🔹 Manipulação de Conteúdo Dinâmico
-- Conversão de Markdown para HTML
-- Uso das bibliotecas `remark` e `remark-html`
-- Geração de páginas a partir de conteúdo estruturado
+# 🧠 Habilidades Demonstradas
 
-### 🔹 Observabilidade
-- Configuração do `Winston` como logger da aplicação
-- Organização de logs simples para melhor rastreabilidade
+## 🏗 Arquitetura Frontend
 
----
+-   Estruturação de projeto com **Next.js App Router**
+-   Uso de **Server Components**
+-   Rotas dinâmicas
+-   Controle de estado pela URL com `searchParams`
 
-## 🛠️ Tecnologias Utilizadas
+## 🗄 Integração com Banco de Dados
 
-- **Next.js**
-- **React**
-- **CSS Modules**
-- **json-server**
-- **Winston**
-- **Remark**
-- **Remark HTML**
+-   Modelagem de dados com **Prisma ORM**
+-   Integração com **PostgreSQL**
+-   Paginação performática utilizando `skip` e `take`
 
----
+## 📄 Conteúdo Dinâmico
 
-## 🎯 Objetivos Técnicos Alcançados
+-   Conversão de **Markdown → HTML**
+-   Geração dinâmica de páginas
+-   Renderização segura de conteúdo
 
-✔ Implementação de SSR  
-✔ Paginação controlada por query string  
-✔ Geração de rotas dinâmicas  
-✔ Conversão de Markdown para HTML  
-✔ Integração com API externa  
-✔ Estrutura escalável e modular  
+## ⚡ Performance
 
----
+-   Otimização de imagens com `next/image`
+-   Renderização no servidor (**SSR**)
+-   Queries eficientes no banco de dados
+
+## 🔎 Observabilidade
+
+-   Logging estruturado com **Winston**
+-   Organização de logs para debugging
+
+------------------------------------------------------------------------
+
+# 🏗 Arquitetura da Aplicação
+
+Next.js (Frontend + Server)\
+│\
+│ Prisma ORM\
+▼\
+PostgreSQL (Docker)
+
+------------------------------------------------------------------------
+
+# 🛠️ Tecnologias Utilizadas
+
+  Tecnologia   Função
+  ------------ ----------------------------
+  Next.js      Framework React Full Stack
+  React        Interface da aplicação
+  Prisma       ORM para banco de dados
+  PostgreSQL   Banco de dados relacional
+  Docker       Containerização
+  Remark       Conversão de Markdown
+  Winston      Sistema de logging
+
+------------------------------------------------------------------------
+
+# 📦 Módulos Implementados
+
+## 🔹 Infraestrutura Full Stack
+
+-   Configuração de **PostgreSQL com Docker**
+-   Setup do **Prisma ORM**
+-   Modelagem de entidades
+-   Execução de **migrations**
+
+## 🔹 Prisma ORM
+
+-   Consultas utilizando `findMany`
+-   Inclusão automática de relacionamentos
+-   Seed de banco com `prisma db seed`
+
+## 🔹 Paginação no Banco
+
+-   Implementação de paginação com `skip` e `take`
+-   Integração com parâmetros da URL
+-   Correção de bugs relacionados a tipagem
+
+## 🔹 Página de Detalhe de Post
+
+-   Query utilizando `findFirst`
+-   Tratamento de erros inesperados
+-   Página **404 customizada**
+-   Redirecionamento no servidor
+
+## 🔹 Sistema de Busca
+
+-   Queries avançadas com cláusulas `WHERE`
+-   Navegação baseada em filtros
+-   Links dinâmicos
+
+## 🔹 Deploy e Infraestrutura
+
+-   Configuração de scripts de build
+-   Deploy na **Vercel**
+-   Integração com **PostgreSQL remoto**
+
+------------------------------------------------------------------------
+
+# 🚀 Como Executar o Projeto
+
+## 1. Clonar repositório
+
+git clone https://github.com/ViniciusPeraro/code-connect
+
+## 2. Instalar dependências
+
+npm install
+
+## 3. Subir banco com Docker
+
+docker compose up -d
+
+## 4. Executar migrations
+
+> npx prisma migrate dev    
+> npx prisma generate  
+
+## 5. Popular banco
+
+npx prisma db seed
+
+## 6. Rodar aplicação
+
+npm run dev
+
+------------------------------------------------------------------------
+
+# 📚 Aprendizados
+
+Durante o desenvolvimento deste projeto foram explorados conceitos
+importantes como:
+
+-   Arquitetura **Full Stack com Next.js**
+-   Uso de **Prisma ORM**
+-   Integração com **Docker**
+-   Paginação performática no banco
+-   Renderização híbrida (**SSR + conteúdo dinâmico**)
+
+------------------------------------------------------------------------
+
+# 👨‍💻 Autor
+
+**Vinícius Peraro**\
+Engenheiro de Computação focado em desenvolvimento **Full Stack e
+aplicações web modernas**.

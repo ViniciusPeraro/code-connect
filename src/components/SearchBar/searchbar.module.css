@@ -1,0 +1,64 @@
+.icon {
+    color: #BCBCBC;
+    width: 24px;
+    height: 24px;
+    margin-left: 18px;
+
+}
+
+.button {
+    margin: 10px;
+    background-color: #81FE88;
+    color: #132E35;
+    border: none;
+    padding: 16px 12px 16px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.input {
+    background-color: transparent;
+    border: none;
+    color: #BCBCBC;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+    background: #171D1F;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.searchbar {
+    width: 100%;
+    height: 56px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.searchbar:hover{
+    border: 1px solid #81FE88;
+    transition: 0.3s;
+}
+
+.searchbar:hover .icon {
+    color: #81FE88;
+    transition: 0.3s;
+}

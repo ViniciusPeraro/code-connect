@@ -7,7 +7,7 @@ export const CardPost = ({ post, highlight }) => {
     return (
         <Link href={`/posts/${post.slug}`} className={styles["link"]}>
              <article className={styles["card-post"]} 
-                style={{ width: highlight ? 993 : 486, height: highlight ? "fit-content" : "auto"}}>
+                style={{ width: highlight ? 993 : 486, height: highlight ? "fit-content" : 432}}>
                 <header className={styles["header"]}>
                     <figure style={{ height: highlight ? 300 : 133}}>
                         <Image 

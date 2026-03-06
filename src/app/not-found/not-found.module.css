@@ -1,0 +1,26 @@
+.svg {
+    width: 10px;
+    height: auto;
+    color: #81FE88;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    color: #81FE88;
+    padding-top: 20px;
+}
+
+.subtitle {
+    color: #BCBCBC;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.container {
+    text-align: center;
+}

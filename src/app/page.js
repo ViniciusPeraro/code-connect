@@ -20,15 +20,8 @@ export default async function Home({ searchParams }) {
       const skip = (page - 1) * perPage;
       const totalPosts = await db.post.count({ where });
 
-
-      console.log(
-        "Obtendo posts para a página:",
-        page,
-        "com busca:",
-        searchQuery,
-        "Total de posts encontrados:",
-        totalPosts
-      );
+      logger.info(`Total de posts encontrados: ${totalPosts} para a consulta: "${searchQuery}"`);
+      logger.info(`Total de posts encontrados: ${totalPosts} para a consulta: "${searchQuery}"`);
 
       const totalPages = Math.ceil(totalPosts / perPage);
 
@@ -46,6 +39,8 @@ export default async function Home({ searchParams }) {
           author: true,
         },
       });
+      
+      logger.info(`Posts encontrados: ${posts.length} para a página: ${page}`);
       return { data: posts, prev, next };
     } catch (error) {
       logger.error("Erro ao obter os posts: " + error.message);

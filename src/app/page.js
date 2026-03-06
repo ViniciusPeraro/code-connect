@@ -24,6 +24,10 @@ export default async function Home({ searchParams }) {
       const perPage = 6;
       const skip = (page - 1) * perPage;
       const totalPosts = await db.post.count({ where });
+
+      
+      console.log("TOTAL POSTS:", totalPosts);
+
       const totalPages = Math.ceil(totalPosts / perPage);
 
       const prev = page > 1 ? page - 1 : null;

@@ -13,12 +13,6 @@ eficiente, geração de conteúdo dinâmico e deploy em ambiente real**.
 
 ------------------------------------------------------------------------
 
-# 🌐 Demo
-
-https://code-connect-orcin-two.vercel.app
-
-------------------------------------------------------------------------
-
 # 🎯 Objetivo do Projeto
 
 Construir uma aplicação que demonstra o fluxo completo de

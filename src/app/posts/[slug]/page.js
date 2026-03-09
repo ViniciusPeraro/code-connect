@@ -11,7 +11,10 @@ async function getPostBySlug(slug) {
   try {
       const post = await db.post.findUnique({
     where: { slug },
-    include: { author: true }
+    include: { 
+      author: true, 
+      comments: true,
+    }
   });
 
   if (!post) {

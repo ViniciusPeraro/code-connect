@@ -1,7 +1,6 @@
 import { Prompt } from 'next/font/google'
 import { Aside } from "../components/Aside";
 import "./globals.css";
-import { SearchIcon } from '@/components/Icons/Search';
 import Searchbar from '@/components/SearchBar';
 
 export const metadata = {

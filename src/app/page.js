@@ -2,6 +2,7 @@ import logger from "@/logger";
 import styles from "./page.module.css";
 import { CardPost } from "@/components/CardPost";
 import Link from "next/link";
+import db from "../../prisma/db";
 
 export default async function Home({ searchParams }) {
   async function getAllPosts(page, searchQuery) {
@@ -15,12 +16,9 @@ export default async function Home({ searchParams }) {
         };
       }
 
- 
       const perPage = 6;
       const skip = (page - 1) * perPage;
       const totalPosts = await db.post.count({ where });
-
-      logger.info(`Total de posts encontrados: ${totalPosts} para a consulta: "${searchQuery}"`);
       logger.info(`Total de posts encontrados: ${totalPosts} para a consulta: "${searchQuery}"`);
 
       const totalPages = Math.ceil(totalPosts / perPage);
@@ -33,13 +31,14 @@ export default async function Home({ searchParams }) {
         skip: skip,
         where,
         orderBy: {
-          createdAt: "desc",
+          id: "desc",
         },
         include: {
           author: true,
+          comments: true,
         },
       });
-      
+
       logger.info(`Posts encontrados: ${posts.length} para a página: ${page}`);
       return { data: posts, prev, next };
     } catch (error) {

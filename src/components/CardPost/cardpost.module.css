@@ -1,6 +1,4 @@
 .card-post{
-    width: 486px;
-    height: 431px;
     background:  #171D1F;
     border-radius: 8px;
 }
@@ -37,9 +35,57 @@
 .footer {
     margin: 0px;
     padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
-.link{  
+.footer p {
+    margin: 0px;
+    padding: 0px;
+    color: #BCBCBC;
+    font-weight: 400;
+    text-align: center;
+}
+
+.link {  
     cursor: pointer;
     text-decoration: none;
+    color: #81FE88;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    color: #BCBCBC;
+    fill: none;
+}
+
+.form {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form:hover .icon {
+    color: #81FE88;
+    transition: fill 0.3s ease;
+}
+
+.form:hover p {
+    color: #81FE88;
+    transition: fill 0.3s ease;
+}
+
+.banner {
+    border-radius: 8px 8px 0px 0px;
+}
+
+.action-container {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }

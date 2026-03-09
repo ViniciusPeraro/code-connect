@@ -1,0 +1,24 @@
+.container {
+    width: 961px;
+    height: 486px;
+    background-color: #171D1F;
+    border-radius: 8px;
+    border: solid 1px #E1E1E1;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header button {
+    border: none;
+    background-color: transparent;
+    color: #E1E1E1;
+    cursor: pointer;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}

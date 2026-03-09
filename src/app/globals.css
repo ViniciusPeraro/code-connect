@@ -25,3 +25,11 @@ body {
 .main-container{
     flex-grow: 1;
 }
+
+
+::backdrop {
+  background-color: #171D1F;
+  opacity: 0.8;
+}
+
+/* 81FE88 */

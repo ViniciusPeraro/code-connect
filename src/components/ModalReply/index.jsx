@@ -4,12 +4,12 @@ import { useRef } from "react"
 import { IconButton } from "../IconButton"
 import { CommentsIcon } from "../Icons/CommentsIcon"
 import { Modal } from "../Modal"
-import styles from "./modalcomment.module.css"
+import styles from "./modalreply.module.css"
 import { SubmitButton } from "../SubmitButton"
 import { Textarea } from "../Textarea"
-import Heading from "../Heading"
+import { Comment } from "../Comment"
 
-export const ModalComment = ({ action }) => {
+export const ModalReply = ({ action, comment }) => {
     const modalRef = useRef(null)
     const formRef = useRef(null)
 
@@ -25,7 +25,7 @@ export const ModalComment = ({ action }) => {
     return (
         <>
             <Modal ref={modalRef} onClick={() => formRef.current.reset()}>
-                <Heading level={2}>Deixe seu comentário sobre o post:</Heading>
+                <Comment comment={comment} replyable={false}></Comment>
                 <form className={styles.form}
                     ref={formRef} 
                     action={action} 
@@ -37,7 +37,8 @@ export const ModalComment = ({ action }) => {
                 </form> 
             </Modal>
             <IconButton onClick={handleOpenModal}>
-                <CommentsIcon className={styles.icon}></CommentsIcon>
+                <strong>Responder</strong>
+                {/* <CommentsIcon className={styles.icon}></CommentsIcon> */}
             </IconButton>
         </>
     )

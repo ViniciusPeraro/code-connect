@@ -1,46 +1,65 @@
 import logger from "@/logger";
 import html from "remark-html";
-import { remark } from "remark"; 
+import { remark } from "remark";
 import styles from "./page.module.css";
 import { CardPost } from "@/components/CardPost";
 import db from "../../../../prisma/db";
 import { log } from "winston";
 import { redirect } from "next/navigation";
+import { CommentList } from "@/components/CommentList";
 
 async function getPostBySlug(slug) {
   try {
-      const post = await db.post.findUnique({
-    where: { slug },
-    include: { 
-      author: true, 
-      comments: true,
+    const post = await db.post.findUnique({
+      where: { slug },
+      include: {
+        author: true,
+        comments: {
+          include: {
+            author: true,
+            children: {
+              include: {
+                author: true,
+              },
+            },
+          },
+          where: {
+            parentId: null,
+          },
+        },
+      },
+    });
+
+    if (!post) {
+      throw new Error(`Post com slug "${slug}" não foi encontrado.`);
     }
-  });
 
-  if (!post) {
-    throw new Error(`Post com slug "${slug}" não foi encontrado.`);
-  }
+    const processedContent = await remark().use(html).process(post.markdown);
+    const contentHtml = processedContent.toString();
 
-  const processedContent = await remark().use(html).process(post.markdown);
-  const contentHtml = processedContent.toString();
-
-  post.markdown = contentHtml;
-  return post;
+    post.markdown = contentHtml;
+    return post;
   } catch (error) {
-    logger.error('Falha ao obter o post com o slug: ', {slug, error});
+    logger.error("Falha ao obter o post com o slug: ", { slug, error });
   }
   redirect("/not-found");
 }
 
 async function pagePost({ params }) {
   const post = await getPostBySlug(params.slug);
-    return (<div>
-        <CardPost post={post} highlight />
-        <h3 className={styles.subtitle}>Código:</h3>
-        <div className={styles.code}>
-            <div dangerouslySetInnerHTML={{ __html: post.markdown }} />
-        </div>
-    </div>);
+  return (
+    <div>
+      <CardPost post={post} highlight />
+      <h3 className={styles.subtitle}>Código:</h3>
+      <div className={styles.code}>
+        <div dangerouslySetInnerHTML={{ __html: post.markdown }} />
+      </div>
+      <div className={styles.comments}>
+        <h2>Comentários</h2>
+        <CommentList comment={post.comments}></CommentList>
+      </div>
+    </div>
+  );
 }
 
 export default pagePost;

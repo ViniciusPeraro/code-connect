@@ -1,9 +1,9 @@
 import Heading from "@/components/Heading";
-import { ArrowBack } from "@/components/Icons/ArrowBack";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./not-found/not-found.module.css";
 import banner from "./not-found/not-found_desktop.png";
+import { ArrowBackIcon } from "@/components/Icons/ArrowBackIcon";
 
 const Notfound = () => {
   return ( 
@@ -12,7 +12,7 @@ const Notfound = () => {
       <Heading level={1}>OPS! Página não encontrada.</Heading>
       <p className={styles.subtitle}>Você pode voltar ao feed e continuar buscando projetos incríveis.</p>
       <Link href="/" className={styles.link}> Voltar ao feed
-        <ArrowBack className={styles.svg}/>
+        <ArrowBackIcon className={styles.svg}/>
       </Link>
     </div>
   )

@@ -1,4 +1,4 @@
-export const Comments = ({ className }) => {
+export const CommentsIcon = ({ className }) => {
   return (
     <svg
       className={className}

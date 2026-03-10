@@ -1,0 +1,12 @@
+.container {
+    background-color: #888888;
+    border-radius: 8px;
+    margin: 10px;
+    height: fit-content;
+    padding: 0;
+}
+
+.list {
+    list-style: none;
+}
+

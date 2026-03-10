@@ -1,4 +1,4 @@
-export const ThumbsUp = ({className}) => {
+export const ThumbsUpIcon = ({className}) => {
   return (
     <svg 
         className={className}

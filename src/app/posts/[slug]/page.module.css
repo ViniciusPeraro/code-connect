@@ -17,3 +17,12 @@
     font-weight: 600;
     line-height: 150%;
 }
+
+.comments {
+    background-color: #888888;
+    border-radius: 8px;
+}
+
+.comments h2 {
+    padding: 10px;
+}

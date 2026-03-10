@@ -1,4 +1,4 @@
-export const ArrowForward = ({ className }) => {
+export const ArrowForwardIcon = ({ className }) => {
   return (
     <svg
       className={className}

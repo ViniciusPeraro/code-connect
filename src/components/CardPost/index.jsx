@@ -7,7 +7,6 @@ import { ThumbsUpButton } from "./ThumbsUpButton";
 import { ModalComment } from "../ModalComment";
 
 export const CardPost = ({ post, highlight }) => {
-
   const submithThumbsUp = incrementThumbsUp.bind(null, post);
   const createComment = postComment.bind(null, post);
 
@@ -43,10 +42,9 @@ export const CardPost = ({ post, highlight }) => {
             <p>{post.likes}</p>
           </form>
           <div>
-            <ModalComment action={createComment} ></ModalComment>
+            <ModalComment action={createComment}></ModalComment>
             <p>{post.comments.length}</p>
           </div>
-
         </div>
         <Avatar imageSrc={post.author.avatar} name={post.author.username} />
       </footer>
